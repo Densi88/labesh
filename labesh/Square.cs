@@ -112,9 +112,10 @@ namespace labesh
             var lalala = instance2.To(instance1.type);
             return new Square(instance1.value + lalala.value, instance1.type);
         }
-        //public static Square SquareMinus(Square instance1, Square instance2)
-        //{
-            //return instance1 - instance2.To(instance1.type).value;
-        //}
+       public static Square operator -(Square instance1, Square instance2)
+        {
+            var lalala = instance2.To(instance1.type);
+            return new Square(instance1.value - lalala.value, instance1.type);
+        }
     }
 }
