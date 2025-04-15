@@ -50,7 +50,9 @@ namespace labesh.Tests
         [TestMethod()]
         public void ToTest()
         {
-            Assert.Fail();
+            var a = new Square(1, Square.measure.tens);
+            var result = a.To(Square.measure.mSquare);
+            Assert.AreEqual("10925 м^2", result.verbose());
         }
 
         [TestMethod()]

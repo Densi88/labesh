@@ -117,5 +117,28 @@ namespace labesh
             var lalala = instance2.To(instance1.type);
             return new Square(instance1.value - lalala.value, instance1.type);
         }
+        public double getValue()
+        {
+            return value;
+        }
+        public static string compare(Square instance1, Square instance2)
+        {
+            string result = "";
+            instance1=instance1.To(Square.measure.mSquare);
+            instance2=instance2.To(Square.measure.mSquare);
+            if (instance1.getValue()>instance2.getValue())
+            {
+                result = "Первая площадь больше второй!";
+            }
+            if(instance1.getValue()<instance2.getValue())
+            {
+                result = "Вторая площадь больше первой!";
+            }
+            if(instance1.getValue() == instance2.getValue())
+            {
+                result = "Площади равны!";
+            }
+            return result;
+        }
     }
 }

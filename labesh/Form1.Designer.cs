@@ -35,6 +35,13 @@
             comboBox2 = new ComboBox();
             comboBox3 = new ComboBox();
             comboBox4 = new ComboBox();
+            textBox2 = new TextBox();
+            button1 = new Button();
+            comboBox5 = new ComboBox();
+            comboBox6 = new ComboBox();
+            textBox3 = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // textFirst
@@ -104,11 +111,80 @@
             comboBox4.Text = "м^2";
             comboBox4.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
             // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(151, 168);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(64, 23);
+            textBox2.TabIndex = 8;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(290, 226);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 9;
+            button1.Text = "Сравнить";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // comboBox5
+            // 
+            comboBox5.AutoCompleteCustomSource.AddRange(new string[] { "+", "-" });
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Location = new Point(86, 168);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(47, 23);
+            comboBox5.TabIndex = 10;
+            comboBox5.Text = "м^2";
+            // 
+            // comboBox6
+            // 
+            comboBox6.AutoCompleteCustomSource.AddRange(new string[] { "+", "-" });
+            comboBox6.FormattingEnabled = true;
+            comboBox6.Location = new Point(221, 168);
+            comboBox6.Name = "comboBox6";
+            comboBox6.Size = new Size(47, 23);
+            comboBox6.TabIndex = 11;
+            comboBox6.Text = "м^2";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(12, 168);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(64, 23);
+            textBox3.TabIndex = 13;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(179, 150);
+            label1.Name = "label1";
+            label1.Size = new Size(13, 15);
+            label1.TabIndex = 14;
+            label1.Text = "1";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(38, 150);
+            label2.Name = "label2";
+            label2.Size = new Size(13, 15);
+            label2.TabIndex = 15;
+            label2.Text = "2";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(377, 261);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(textBox3);
+            Controls.Add(comboBox6);
+            Controls.Add(comboBox5);
+            Controls.Add(button1);
+            Controls.Add(textBox2);
             Controls.Add(comboBox4);
             Controls.Add(comboBox3);
             Controls.Add(comboBox2);
@@ -131,5 +207,12 @@
         private ComboBox comboBox2;
         private ComboBox comboBox3;
         private ComboBox comboBox4;
+        private TextBox textBox2;
+        private Button button1;
+        private ComboBox comboBox5;
+        private ComboBox comboBox6;
+        private TextBox textBox3;
+        private Label label1;
+        private Label label2;
     }
 }
