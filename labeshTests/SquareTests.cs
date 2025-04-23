@@ -11,48 +11,13 @@ namespace labesh.Tests
     [TestClass()]
     public class SquareTests
     {
-        [TestMethod()]
-        public void SquareTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void verboseTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void SquarePlusNumberTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void SquareMinusNumberTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void SquareMultiplicationNumberTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void SquareDivisionNumberTest()
-        {
-            Assert.Fail();
-        }
-
+        
         [TestMethod()]
         public void ToTest()
         {
-            var a = new Square(1, Square.measure.tens);
+            var a = new Square(1, Square.measure.gectar);
             var result = a.To(Square.measure.mSquare);
-            Assert.AreEqual("10925 м^2", result.verbose());
+            Assert.AreEqual("10000 м^2", result.verbose());
         }
 
         [TestMethod()]
@@ -63,12 +28,39 @@ namespace labesh.Tests
             Assert.AreEqual("10100 м^2", (m+km).verbose());
             
         }
+        [TestMethod()]
+        public void SquarePlusTest2()
+        {
+            var a=new Square(5, Square.measure.mSquare);
+            var b = new Square(5, Square.measure.mSquare);
+            var result = a + b;
+            Assert.AreEqual("10 м^2", result.verbose());
+        }
 
 
         [TestMethod()]
         public void SquareMinusTest()
         {
-            
+            var a = new Square(5, Square.measure.mSquare);
+            var b = new Square(5, Square.measure.mSquare);
+            var result = a - b;
+            Assert.AreEqual("0 м^2", result.verbose());
+        }
+        [TestMethod()]
+        public void CompareTest1()
+        {
+            var a = new Square(5, Square.measure.mSquare);
+            var b = new Square(5, Square.measure.mSquare);
+            var result=Square.compare(a, b);
+            Assert.AreEqual("Площади равны!", result);
+        }
+        [TestMethod()]
+        public void CompareTest2()
+        {
+            var a = new Square(5, Square.measure.gectar);
+            var b = new Square(5, Square.measure.mSquare);
+            var result = Square.compare(a,b);
+            Assert.AreEqual("Первая площадь больше второй!", result);
         }
     }
 }
